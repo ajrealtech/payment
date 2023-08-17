@@ -6,8 +6,8 @@ metadata:
   creationTimestamp: "2023-06-25T13:45:31Z"
   generation: 1
   labels:
-    app: customer
-  name: customer
+    app: payment
+  name: payment
   namespace: default
   resourceVersion: "47927"
   uid: ecc88a5b-a26d-4485-993e-274555f7bb6d
@@ -17,7 +17,7 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app: customer
+      app: payment
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -27,10 +27,10 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        app: customer
+        app: payment
     spec:
       containers:
-      - image: ajtake22/customer
+      - image: ajtake22/payment
         imagePullPolicy: Always
         name: customer
         resources: {}

@@ -1,5 +1,6 @@
 package com.org.ps.martek.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,11 +12,12 @@ public class Product {
 
 	private String name;
 	
-	private String id;
+	private String password;
 	
-	private String location;
+	private String address;
 	
-	private String flowId;
+	private String phone;
 	
-	private int quantity;
+	@NotNull
+	private String username;
 }
