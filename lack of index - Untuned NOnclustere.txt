@@ -1,0 +1,50 @@
+lack of index - Untuned NOnclustered Indexes -  SQL queries is missing indexes on the columns that are used in the WHERE, JOIN, ORDER BY, or GROUP BY clauses.
+
+inefficient joins -  use specific join along with condition
+
+Suboptimal subqueries
+
+Excessive Aggregation function  -  To avoid excessive aggregation, you should only use aggregation functions on columns that have high cardinality (i.e., they have many distinct values) and that are relevant to your query.
+
+N+1 query problems
+
+Improper Data Types - you should choose the data types that match the nature and size of your data, and that are compatible with the data types of the columns or variables that you compare or join. You should also avoid using generic or large data types such as VARCHAR(MAX) or NVARCHAR(MAX), unless you really need them
+
+
+Query Plan 
+
+Wild Card characters and row goals like top,exits
+
+
+Apart from that there can be issue like Database configuration issues, hardware or OS limitation like insufficient ram, 
+limited harddisk ,  inadequate cpu
+ 
+Procedure
+
+Set NOCount On , it reduce network trips
+
+Fetch only required columns,Not select *
+
+Avoid using cursors
+
+Transfer the relevant record to local carriable to discoect table reference. Prefer local variaale istead of temp tables
+
+create views for repeated select query
+
+keep transaction block short  to avoid lock and deadlock
+
+create non clustered index which can be used in explain plan
+
+use if exist,  try/catch for error hadling
+
+use schema name which is useful to compile plan
+
+
+
+
+DMV dynamic management can be used server state information
+trouble shooting performance related issues
+
+
+
+
