@@ -27,7 +27,7 @@ Fetch only required columns,Not select *
 
 Avoid using cursors
 
-Transfer the relevant record to local carriable to discoect table reference. Prefer local variaale istead of temp tables
+Transfer the relevant record to local carriable to disconnect table reference. Prefer local variable instead of temp tables
 
 create views for repeated select query
 
@@ -42,9 +42,24 @@ use schema name which is useful to compile plan
 
 
 
-DMV dynamic management can be used server state information
-trouble shooting performance related issues
+DMV dynamic management can be used server state information trouble shooting performance related issues
+
+You can use dynamic management views (DMVs) to monitor workload performance and diagnose performance problems, 
+which might be caused by blocked or long-running queries, resource bottlenecks, suboptimal query plans, and more.
 
 
+
+[dm_os_sys_memory]
+
+[dm_os_process_memory]
+
+[dm_os_memory_objects]
+
+
+[dm_exec_connections]
+
+[dm_exec_sessions]
+
+[dm_db_missing_index_details]
 
 
